@@ -31,6 +31,7 @@ window.onload = function () {
 const get_yaml = url => {
   fetch(url)
     .then(yaml => {
+      console.log(yaml)
       console.log(js2yml.load(yaml))
   })
 }
