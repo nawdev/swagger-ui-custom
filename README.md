@@ -23,3 +23,10 @@ the content of directory `dist`.
 
 - `/somepath` serves `index.html`
 - `/somepath/documentation-assets/main.js` serves `dist/main.js`
+
+
+## constraints
+
+api must provide
+
+- `/service.yaml`
