@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    main: './src/main.js'
+    main: './src/main.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -21,5 +21,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
-  ]
+  ],
+  devtool: '#eval-source-map'
 }
