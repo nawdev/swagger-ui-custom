@@ -1,0 +1,16 @@
+swagger: '2.0'
+info:
+  title: swagger ui demo
+  description: it's just a fake api
+  version: 0.0.1
+
+
+paths:
+  /demo.json:
+    get:
+      description: some demo response
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK

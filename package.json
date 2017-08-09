@@ -4,6 +4,7 @@
   "description": "swagger-ui variant for api-served docs and tests",
   "scripts": {
     "build": "webpack --progress",
+    "dev": "webpack-dev-server --open --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +24,8 @@
     "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.1"
+    "webpack": "^3.5.1",
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
     "js-yaml": "^3.9.1",
