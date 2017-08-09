@@ -14,6 +14,10 @@ npm install
 npm -s run build
 ```
 
-within your api serve `index.html` at some url, f.e. '/' or '/doc'.
-serve the content of `build/` under 'documentation-assets', f.e.
-'/documentation-assets' or '/doc/documentation-assets'.
+within your api serve `index.html` at some url and relative to it under `documentation-assets`
+the content of directory `dist`.
+
+## example
+
+`/somepath` serves `index.html`
+`/somepath/documentation-assets/main.js` serves `dist/main.js`
