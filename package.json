@@ -1,0 +1,23 @@
+{
+  "name": "swagger-local",
+  "version": "0.0.0",
+  "description": "swagger-ui variant for api-served docs and tests",
+  "scripts": {
+    "build": "webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbschr/swagger-local.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbschr/swagger-local/issues"
+  },
+  "homepage": "https://github.com/hbschr/swagger-local#readme",
+  "devDependencies": {
+    "webpack": "^3.5.1"
+  }
+}
