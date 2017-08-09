@@ -4,14 +4,15 @@ import SwaggerUIBundle from 'swagger-ui-dist/swagger-ui-bundle.js'
 import SwaggerUIStandalonePreset from 'swagger-ui-dist/swagger-ui-standalone-preset.js'
 
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", event => {
+  get_spec('/service.yaml')
+    .then(init_app)
+})
 
-
-
-  // Build a system
-  const ui = SwaggerUIBundle({
-    url: "/service.yaml",
-    // spec: xxx,
+const init_app = spec => {
+  SwaggerUIBundle({
+    // url: "/service.yaml",
+    spec: spec,
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
@@ -23,8 +24,6 @@ window.onload = function () {
     ],
     layout: "StandaloneLayout"
   })
-
-  window.ui = ui
 }
 
 
@@ -40,7 +39,3 @@ const get_spec = url => (
     .then(yaml => js_yaml.safeLoad(yaml))
     .then(spec => set_host(spec))
 )
-
-
-get_spec('/service.yaml')
-  .then(console.info)
