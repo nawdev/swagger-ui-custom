@@ -1,4 +1,4 @@
-import js2yml from 'js-yaml'
+import js_yaml from 'js-yaml'
 
 import SwaggerUIBundle from 'swagger-ui-dist/swagger-ui-bundle.js'
 import SwaggerUIStandalonePreset from 'swagger-ui-dist/swagger-ui-standalone-preset.js'
@@ -28,13 +28,19 @@ window.onload = function () {
 }
 
 
-const get_yaml = url => {
-  fetch(url)
-    .then(yaml => {
-      console.log(yaml)
-      console.log(js2yml.load(yaml))
-  })
+const set_host = spec => {
+  spec.host = location.host
+  return spec
 }
 
 
-get_yaml('/service.yaml')
+const get_spec = url => (
+  fetch(url)
+    .then(response => response.text())
+    .then(yaml => js_yaml.safeLoad(yaml))
+    .then(spec => set_host(spec))
+)
+
+
+get_spec('/service.yaml')
+  .then(console.info)
