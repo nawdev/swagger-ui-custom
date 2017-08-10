@@ -1,11 +1,6 @@
 # swagger-local
 
-swagger-ui variant for api-served docs and tests
-
-attention: this is a hack, use with caution.
-
-ahh, and not much docu...
-
+customized build of `swagger-ui` for api-served docs and tests
 
 
 # usage
