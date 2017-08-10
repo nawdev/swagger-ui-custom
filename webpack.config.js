@@ -1,18 +1,22 @@
 var path = require('path')
 var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './src/main.js',
-    style: 'swagger-ui-dist/swagger-ui.css',
+    doc: './src/main.js',
+    'doc-style': 'swagger-ui-dist/swagger-ui.css',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/documentation-assets/',
     filename: '[name].js'
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -26,6 +30,9 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    })
   ],
   devtool: '#eval-source-map'
 }
