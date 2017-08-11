@@ -11,12 +11,12 @@ npm -s run build
 ```
 
 within your api serve `dist/index.html` at some url and relative to it `dist/doc.js` and
-`doc-style.js`.
+`dist/doc-style.js`.
 
 
 ## example
 
-- `/somepath` serves `dist/index.html`
+- `/somepath/` serves `dist/index.html`
 - `/somepath/doc.js` serves `dist/doc.js`
 
 
