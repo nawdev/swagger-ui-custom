@@ -1,5 +1,5 @@
 {
-  "name": "swagger-local",
+  "name": "swagger-ui-custom",
   "version": "0.0.0",
   "description": "swagger-ui variant for api-served docs and tests",
   "scripts": {
